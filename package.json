@@ -1,0 +1,19 @@
+{
+  "name": "array-as-a-service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kex3/aaas.git"
+  },
+  "author": "Björn Gustafsson <me@kex3.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kex3/aaas/issues"
+  },
+  "homepage": "https://github.com/kex3/aaas#readme"
+}
