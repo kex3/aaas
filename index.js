@@ -1,14 +1,14 @@
-var http = require('http');
+const http = require('http');
 
-var fourohfour = function(res) {
+const fourohfour = (res) => {
 	res.statusCode = 404;
 	res.end('404 Not Found');
 };
 
-http.createServer(function (req, res) {
+http.createServer((req, res) => {
 	res.writeHead(200, {'Content-Type': 'application/javascript'});
 
-	var parts = req.url.split('/');
+	let parts = req.url.split('/');
 	parts.shift();
 
 	if (parts.length != 3
@@ -18,7 +18,7 @@ http.createServer(function (req, res) {
 		return fourohfour(res);
 	}
 
-	var array = [],
+	let array = [],
 		start = parseInt(parts[0]),
 		end = parseInt(parts[1]),
 		cb = parts[2];
@@ -31,5 +31,5 @@ http.createServer(function (req, res) {
 		array.push(i);
 	}
 
-	res.end(cb + '(' + JSON.stringify(array) + ');');
+	res.end(`${cb}(${JSON.stringify(array)});`);
 }).listen(8080);
