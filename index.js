@@ -12,8 +12,8 @@ http.createServer(function (req, res) {
 	parts.shift();
 
 	if (parts.length != 3
-		|| !parseInt(parts[0]) == parts[0]
-		|| !parseInt(parts[1]) == parts[1]
+		|| parseInt(parts[0]) != parts[0]
+		|| parseInt(parts[1]) != parts[1]
 	) {
 		return fourohfour(res);
 	}
